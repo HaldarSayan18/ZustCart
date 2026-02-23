@@ -6,6 +6,7 @@ import { resolve } from 'path'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  base: "/ZustCart/",
   resolve: {
     alias: {
       react: resolve(__dirname, 'node_modules/react'),
