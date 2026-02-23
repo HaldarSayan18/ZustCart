@@ -6,7 +6,7 @@ import './App.css';
 import Footer from './components/Footer';
 import axios from 'axios';
 
-export const backendAPI = 'https://zustcart-server.onrender.com/';
+export const backendAPI = 'https://zustcart-server.onrender.com';
 
 export default function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
