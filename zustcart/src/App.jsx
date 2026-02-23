@@ -6,6 +6,8 @@ import './App.css';
 import Footer from './components/Footer';
 import axios from 'axios';
 
+export const backendAPI = 'https://zustcart-server.onrender.com/';
+
 export default function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -13,7 +15,7 @@ export default function App() {
 
   async function fetchProducts() {
     try {
-      const products = await axios.get('http://localhost:8080/api/products');
+      const products = await axios.get(`${backendAPI}/api/products`);
       setProductsData(products.data.data);
     } catch (error) {
       console.error('Error fetching products:', error);
